@@ -1,0 +1,83 @@
+{
+  "cities": {
+    "from": [
+      "Delhi",
+      "Mumbai",
+      "Bangalore",
+      "Chennai",
+      "Kolkata",
+      "Hyderabad",
+      "Pune",
+      "Ahmedabad"
+    ],
+    "to": [
+      "Mumbai",
+      "Delhi",
+      "Goa",
+      "Chennai",
+      "Bangalore",
+      "Jaipur",
+      "Kochi",
+      "Udaipur"
+    ],
+    "hotels": [
+      "Goa",
+      "Mumbai",
+      "Delhi",
+      "Bangalore",
+      "Jaipur",
+      "Udaipur",
+      "Shimla",
+      "Manali"
+    ]
+  },
+  "dates": {
+    "departure": [
+      "Wed Dec 25 2024",
+      "Thu Dec 26 2024",
+      "Fri Dec 27 2024",
+      "Sat Dec 28 2024",
+      "Sun Dec 29 2024",
+      "Mon Dec 30 2024"
+    ],
+    "return": [
+      "Fri Dec 27 2024",
+      "Sat Dec 28 2024",
+      "Sun Dec 29 2024",
+      "Mon Dec 30 2024",
+      "Tue Dec 31 2024"
+    ],
+    "checkin": [
+      "Fri Dec 27 2024",
+      "Sat Dec 28 2024",
+      "Sun Dec 29 2024"
+    ],
+    "checkout": [
+      "Sun Dec 29 2024",
+      "Mon Dec 30 2024",
+      "Tue Dec 31 2024"
+    ]
+  },
+  "guests": {
+    "single": {
+      "adults": 1,
+      "children": 0,
+      "rooms": 1
+    },
+    "couple": {
+      "adults": 2,
+      "children": 0,
+      "rooms": 1
+    },
+    "family": {
+      "adults": 2,
+      "children": 2,
+      "rooms": 1
+    },
+    "group": {
+      "adults": 4,
+      "children": 2,
+      "rooms": 2
+    }
+  }
+}

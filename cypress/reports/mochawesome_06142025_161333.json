@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-14T12:13:22.904Z",
+    "end": "2025-06-14T12:13:33.353Z",
+    "duration": 10449,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "d11b52d7-5c80-4962-8add-b560db07a943",
+      "title": "",
+      "fullFile": "cypress/e2e/flight-search.cy.js",
+      "file": "cypress/e2e/flight-search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ad45f8b-6dc1-4712-859f-23404b6fb7b5",
+          "title": "Flight Search Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for one-way flights",
+              "fullTitle": "Flight Search Tests should search for one-way flights",
+              "timedOut": null,
+              "duration": 10365,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickFlightsTab().selectOneWayTrip().enterFromCity(data.cities.from[0]).enterToCity(data.cities.to[0]).selectDepartureDate(data.dates.departure[0]).clickSearchButton();\n  flightResultsPage.waitForResults().verifyFlightResultsDisplayed().verifyFlightPricesDisplayed();\n  flightResultsPage.getNumberOfResults().should('be.greaterThan', 0);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Flight Search Tests`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Flight Search Tests`\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at HomePage.visit (webpack://makemytrip-cypress-automation/./cypress/support/page-objects/HomePage.js:21:7)\n    at Context.eval (webpack://makemytrip-cypress-automation/./cypress/e2e/flight-search.cy.js:11:13)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:290:108477)\n      at Object.onceWrapper (node:events:628:28)\n      at ClientRequest.emit (node:events:514:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)\n      at Object.onceWrapper (node:events:628:28)\n      at TLSSocket.emit (node:events:526:35)\n      at TLSSocket._onTimeout (node:net:571:8)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "88f82619-81e7-4ad9-8b78-b3a84db1ecdb",
+              "parentUUID": "7ad45f8b-6dc1-4712-859f-23404b6fb7b5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should search for round-trip flights",
+              "fullTitle": "Flight Search Tests should search for round-trip flights",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickFlightsTab().selectRoundTrip().enterFromCity(data.cities.from[2]).enterToCity(data.cities.to[2]).selectDepartureDate(data.dates.departure[1]).selectReturnDate(data.dates.return[1]).clickSearchButton();\n  flightResultsPage.waitForResults().verifyFlightResultsDisplayed().verifyFlightPricesDisplayed();\n  flightResultsPage.getNumberOfResults().should('be.greaterThan', 0);\n});",
+              "err": {},
+              "uuid": "abed8321-06a9-4992-9d97-af1a4730b147",
+              "parentUUID": "7ad45f8b-6dc1-4712-859f-23404b6fb7b5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should sort flight search results",
+              "fullTitle": "Flight Search Tests should sort flight search results",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickFlightsTab().selectOneWayTrip().enterFromCity(data.cities.from[1]).enterToCity(data.cities.to[3]).selectDepartureDate(data.dates.departure[2]).clickSearchButton();\n  flightResultsPage.waitForResults().verifyFlightResultsDisplayed();\n  // Test sorting by price\n  flightResultsPage.sortByPrice();\n  flightResultsPage.getFirstFlightPrice().should('not.be.empty');\n  // Test sorting by duration\n  flightResultsPage.sortByDuration();\n});",
+              "err": {},
+              "uuid": "51da49e6-b7f6-42f1-8669-424fb3b6af09",
+              "parentUUID": "7ad45f8b-6dc1-4712-859f-23404b6fb7b5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should initiate flight booking flow",
+              "fullTitle": "Flight Search Tests should initiate flight booking flow",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickFlightsTab().selectOneWayTrip().enterFromCity(data.cities.from[3]).enterToCity(data.cities.to[1]).selectDepartureDate(data.dates.departure[3]).clickSearchButton();\n  flightResultsPage.waitForResults().verifyFlightResultsDisplayed().clickFirstFlightViewPrices();\n});",
+              "err": {},
+              "uuid": "0a366720-9792-4b05-b455-2fb1697b3560",
+              "parentUUID": "7ad45f8b-6dc1-4712-859f-23404b6fb7b5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should handle multiple flight searches",
+              "fullTitle": "Flight Search Tests should handle multiple flight searches",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  // First search\n  homePage.clickFlightsTab().selectOneWayTrip().enterFromCity(data.cities.from[0]).enterToCity(data.cities.to[0]).selectDepartureDate(data.dates.departure[0]).clickSearchButton();\n  flightResultsPage.waitForResults().verifyFlightResultsDisplayed();\n  // Navigate back and perform second search\n  cy.go('back');\n  cy.waitForPageLoad();\n  homePage.enterFromCity(data.cities.from[1]).enterToCity(data.cities.to[1]).selectDepartureDate(data.dates.departure[1]).clickSearchButton();\n  flightResultsPage.waitForResults().verifyFlightResultsDisplayed();\n});",
+              "err": {},
+              "uuid": "f88cd391-c88f-4e2f-92c8-677df7e0e597",
+              "parentUUID": "7ad45f8b-6dc1-4712-859f-23404b6fb7b5",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "88f82619-81e7-4ad9-8b78-b3a84db1ecdb"
+          ],
+          "pending": [],
+          "skipped": [
+            "abed8321-06a9-4992-9d97-af1a4730b147",
+            "51da49e6-b7f6-42f1-8669-424fb3b6af09",
+            "0a366720-9792-4b05-b455-2fb1697b3560",
+            "f88cd391-c88f-4e2f-92c8-677df7e0e597"
+          ],
+          "duration": 10365,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

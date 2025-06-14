@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2025-06-14T12:13:59.252Z",
+    "end": "2025-06-14T12:14:40.206Z",
+    "duration": 40954,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dadff056-6bda-4c8d-9fa8-5514e7487b45",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke-tests.cy.js",
+      "file": "cypress/e2e/smoke-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0a3c0f43-7af7-4fcc-ba48-228135d7f8c5",
+          "title": "Smoke Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should load MakeMyTrip homepage",
+              "fullTitle": "Smoke Tests should load MakeMyTrip homepage",
+              "timedOut": null,
+              "duration": 10246,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.visit();\nhomePage.verifyHomePageLoaded();\nhomePage.verifyPageTitle('MakeMyTrip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at HomePage.visit (webpack://makemytrip-cypress-automation/./cypress/support/page-objects/HomePage.js:21:7)\n    at Context.eval (webpack://makemytrip-cypress-automation/./cypress/e2e/smoke-tests.cy.js:11:13)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:290:108477)\n      at Object.onceWrapper (node:events:628:28)\n      at ClientRequest.emit (node:events:514:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)\n      at Object.onceWrapper (node:events:628:28)\n      at TLSSocket.emit (node:events:526:35)\n      at TLSSocket._onTimeout (node:net:571:8)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "376793ee-e9a1-4d7c-9c07-8003c0a3cb95",
+              "parentUUID": "0a3c0f43-7af7-4fcc-ba48-228135d7f8c5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display all main navigation tabs",
+              "fullTitle": "Smoke Tests should display all main navigation tabs",
+              "timedOut": null,
+              "duration": 10200,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.visit();\n// Verify all tabs are visible\nhomePage.flightsTab.should('be.visible');\nhomePage.hotelsTab.should('be.visible');\nhomePage.trainsTab.should('be.visible');\nhomePage.busTab.should('be.visible');\nhomePage.cabsTab.should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at HomePage.visit (webpack://makemytrip-cypress-automation/./cypress/support/page-objects/HomePage.js:21:7)\n    at Context.eval (webpack://makemytrip-cypress-automation/./cypress/e2e/smoke-tests.cy.js:17:13)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:290:108477)\n      at Object.onceWrapper (node:events:628:28)\n      at ClientRequest.emit (node:events:514:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)\n      at Object.onceWrapper (node:events:628:28)\n      at TLSSocket.emit (node:events:526:35)\n      at TLSSocket._onTimeout (node:net:571:8)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "4a5306e0-3d12-4100-8915-e01d0543c614",
+              "parentUUID": "0a3c0f43-7af7-4fcc-ba48-228135d7f8c5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should handle login popup gracefully",
+              "fullTitle": "Smoke Tests should handle login popup gracefully",
+              "timedOut": null,
+              "duration": 10222,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.visit();\n// Login popup handling is done in the visit method\nhomePage.verifyHomePageLoaded();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at HomePage.visit (webpack://makemytrip-cypress-automation/./cypress/support/page-objects/HomePage.js:21:7)\n    at Context.eval (webpack://makemytrip-cypress-automation/./cypress/e2e/smoke-tests.cy.js:28:13)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:290:108477)\n      at Object.onceWrapper (node:events:628:28)\n      at ClientRequest.emit (node:events:514:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)\n      at Object.onceWrapper (node:events:628:28)\n      at TLSSocket.emit (node:events:526:35)\n      at TLSSocket._onTimeout (node:net:571:8)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "c0cb4914-365f-4ef7-b5cc-8b827b91f146",
+              "parentUUID": "0a3c0f43-7af7-4fcc-ba48-228135d7f8c5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have responsive design",
+              "fullTitle": "Smoke Tests should have responsive design",
+              "timedOut": null,
+              "duration": 10205,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Test different viewport sizes\nconst viewports = [{\n  width: 1920,\n  height: 1080\n},\n// Desktop\n{\n  width: 1366,\n  height: 768\n},\n// Laptop\n{\n  width: 768,\n  height: 1024\n},\n// Tablet\n{\n  width: 375,\n  height: 667\n} // Mobile\n];\nviewports.forEach(viewport => {\n  cy.viewport(viewport.width, viewport.height);\n  homePage.visit();\n  homePage.verifyHomePageLoaded();\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at HomePage.visit (webpack://makemytrip-cypress-automation/./cypress/support/page-objects/HomePage.js:21:7)\n    at eval (webpack://makemytrip-cypress-automation/./cypress/e2e/smoke-tests.cy.js:44:15)\nat Array.forEach (<anonymous>)\n    at Context.eval (webpack://makemytrip-cypress-automation/./cypress/e2e/smoke-tests.cy.js:42:14)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:290:108477)\n      at Object.onceWrapper (node:events:628:28)\n      at ClientRequest.emit (node:events:514:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)\n      at Object.onceWrapper (node:events:628:28)\n      at TLSSocket.emit (node:events:526:35)\n      at TLSSocket._onTimeout (node:net:571:8)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "80af9093-38a9-4280-a0ea-1455cd5d2ea7",
+              "parentUUID": "0a3c0f43-7af7-4fcc-ba48-228135d7f8c5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "376793ee-e9a1-4d7c-9c07-8003c0a3cb95",
+            "4a5306e0-3d12-4100-8915-e01d0543c614",
+            "c0cb4914-365f-4ef7-b5cc-8b827b91f146",
+            "80af9093-38a9-4280-a0ea-1455cd5d2ea7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 40873,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

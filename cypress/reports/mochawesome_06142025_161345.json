@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-14T12:13:35.123Z",
+    "end": "2025-06-14T12:13:45.398Z",
+    "duration": 10275,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3408939d-0621-4b24-add4-c55e9a5bd77b",
+      "title": "",
+      "fullFile": "cypress/e2e/hotel-search.cy.js",
+      "file": "cypress/e2e/hotel-search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+          "title": "Hotel Search Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to Hotels section",
+              "fullTitle": "Hotel Search Tests should navigate to Hotels section",
+              "timedOut": null,
+              "duration": 10212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.clickHotelsTab();\nhotelsPage.verifyHotelsPageLoaded();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Hotel Search Tests`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.makemytrip.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Hotel Search Tests`\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://www.makemytrip.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at HomePage.visit (webpack://makemytrip-cypress-automation/./cypress/support/page-objects/HomePage.js:21:7)\n    at Context.eval (webpack://makemytrip-cypress-automation/./cypress/e2e/hotel-search.cy.js:14:13)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (<embedded>:290:108477)\n      at Object.onceWrapper (node:events:628:28)\n      at ClientRequest.emit (node:events:514:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:847:9)\n      at Object.onceWrapper (node:events:628:28)\n      at TLSSocket.emit (node:events:526:35)\n      at TLSSocket._onTimeout (node:net:571:8)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "8a648403-31e2-49bf-b8e4-f7bd086a2c75",
+              "parentUUID": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should search for hotels in a city",
+              "fullTitle": "Hotel Search Tests should search for hotels in a city",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickHotelsTab();\n  hotelsPage.enterCity(data.cities.hotels[0]).selectCheckInDate(data.dates.checkin[0]).selectCheckOutDate(data.dates.checkout[0]).selectRoomsAndGuests(data.guests.couple.adults, data.guests.couple.children, data.guests.couple.rooms).clickSearchButton();\n  hotelResultsPage.waitForResults().verifyHotelResultsDisplayed();\n  hotelResultsPage.getNumberOfResults().should('be.greaterThan', 0);\n});",
+              "err": {},
+              "uuid": "89c7b8da-3971-45aa-922c-d81fd6df9091",
+              "parentUUID": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should search for hotels with multiple guests",
+              "fullTitle": "Hotel Search Tests should search for hotels with multiple guests",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickHotelsTab();\n  hotelsPage.enterCity(data.cities.hotels[1]).selectCheckInDate(data.dates.checkin[1]).selectCheckOutDate(data.dates.checkout[1]).selectRoomsAndGuests(data.guests.group.adults, data.guests.group.children, data.guests.group.rooms).clickSearchButton();\n  hotelResultsPage.waitForResults().verifyHotelResultsDisplayed();\n});",
+              "err": {},
+              "uuid": "1d72af7c-cd22-4341-b4f6-e7134dd38545",
+              "parentUUID": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should sort hotel search results",
+              "fullTitle": "Hotel Search Tests should sort hotel search results",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickHotelsTab();\n  hotelsPage.enterCity(data.cities.hotels[2]).selectCheckInDate(data.dates.checkin[0]).selectCheckOutDate(data.dates.checkout[0]).selectRoomsAndGuests(data.guests.single.adults, data.guests.single.children, data.guests.single.rooms).clickSearchButton();\n  hotelResultsPage.waitForResults().verifyHotelResultsDisplayed();\n  // Test sorting by price\n  hotelResultsPage.sortByPrice();\n  // Test sorting by rating\n  hotelResultsPage.sortByRating();\n});",
+              "err": {},
+              "uuid": "f45687a6-eb5e-46ca-9d23-9608bf347e82",
+              "parentUUID": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should view hotel details",
+              "fullTitle": "Hotel Search Tests should view hotel details",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickHotelsTab();\n  hotelsPage.enterCity(data.cities.hotels[3]).selectCheckInDate(data.dates.checkin[2]).selectCheckOutDate(data.dates.checkout[2]).selectRoomsAndGuests(data.guests.family.adults, data.guests.family.children, data.guests.family.rooms).clickSearchButton();\n  hotelResultsPage.waitForResults().verifyHotelResultsDisplayed().clickFirstHotelViewDetails();\n});",
+              "err": {},
+              "uuid": "c2f89ed5-cc8f-4318-b90a-4da85377b2fd",
+              "parentUUID": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should handle family hotel search",
+              "fullTitle": "Hotel Search Tests should handle family hotel search",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData').then(data => {\n  homePage.clickHotelsTab();\n  hotelsPage.enterCity(data.cities.hotels[4]).selectCheckInDate(data.dates.checkin[1]).selectCheckOutDate(data.dates.checkout[1]).selectRoomsAndGuests(data.guests.family.adults, data.guests.family.children, data.guests.family.rooms).clickSearchButton();\n  hotelResultsPage.waitForResults().verifyHotelResultsDisplayed();\n  // Verify hotel names and prices are displayed\n  hotelResultsPage.getAllHotelNames().should('have.length.greaterThan', 0);\n  hotelResultsPage.getAllHotelPrices().should('have.length.greaterThan', 0);\n});",
+              "err": {},
+              "uuid": "339e2f76-fb8b-4296-a33a-32552aa06bfb",
+              "parentUUID": "a8bc17ba-aea9-460d-8465-b79e9723c0ef",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8a648403-31e2-49bf-b8e4-f7bd086a2c75"
+          ],
+          "pending": [],
+          "skipped": [
+            "89c7b8da-3971-45aa-922c-d81fd6df9091",
+            "1d72af7c-cd22-4341-b4f6-e7134dd38545",
+            "f45687a6-eb5e-46ca-9d23-9608bf347e82",
+            "c2f89ed5-cc8f-4318-b90a-4da85377b2fd",
+            "339e2f76-fb8b-4296-a33a-32552aa06bfb"
+          ],
+          "duration": 10212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

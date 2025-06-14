@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # flight-reservation-portal
+=======
+>>>>>>> 8b0b22e (added cypress project)
 # MakeMyTrip Cypress Automation Framework
 
 A comprehensive Cypress automation framework for testing MakeMyTrip website functionality using modern JavaScript/TypeScript and the Page Object Model design pattern.
@@ -241,4 +244,8 @@ This project is licensed under the MIT License.
 
 - [Cypress Documentation](https://docs.cypress.io/)
 - [Page Object Model Best Practices](https://docs.cypress.io/guides/references/best-practices)
+<<<<<<< HEAD
 - [Mochawesome Reporter](https://github.com/adamgruber/mochawesome)
+=======
+- [Mochawesome Reporter](https://github.com/adamgruber/mochawesome)
+>>>>>>> 8b0b22e (added cypress project)
